@@ -258,33 +258,33 @@ class MyTextStyles extends ThemeExtension<MyTextStyles> {
       letterSpacing: 2,
     ),
   });
-  final TextStyle? h1;
-  final TextStyle? h2;
-  final TextStyle? h3;
-  final TextStyle? h4;
-  final TextStyle? h5;
-  final TextStyle? h6;
+  final TextStyle h1;
+  final TextStyle h2;
+  final TextStyle h3;
+  final TextStyle h4;
+  final TextStyle h5;
+  final TextStyle h6;
 
-  final TextStyle? p1;
-  final TextStyle? p1Bold;
-  final TextStyle? p1Italic;
-  final TextStyle? p2;
-  final TextStyle? p2Bold;
-  final TextStyle? p2Italic;
-  final TextStyle? p3;
-  final TextStyle? p3Bold;
-  final TextStyle? p3Italic;
+  final TextStyle p1;
+  final TextStyle p1Bold;
+  final TextStyle p1Italic;
+  final TextStyle p2;
+  final TextStyle p2Bold;
+  final TextStyle p2Italic;
+  final TextStyle p3;
+  final TextStyle p3Bold;
+  final TextStyle p3Italic;
 
-  final TextStyle? b1;
-  final TextStyle? b2;
-  final TextStyle? b3;
-  final TextStyle? b4;
+  final TextStyle b1;
+  final TextStyle b2;
+  final TextStyle b3;
+  final TextStyle b4;
 
-  final TextStyle? l1;
-  final TextStyle? l2;
-  final TextStyle? l3;
-  final TextStyle? l4;
-  final TextStyle? l5;
+  final TextStyle l1;
+  final TextStyle l2;
+  final TextStyle l3;
+  final TextStyle l4;
+  final TextStyle l5;
 
   @override
   MyTextStyles copyWith({
@@ -303,6 +303,15 @@ class MyTextStyles extends ThemeExtension<MyTextStyles> {
     TextStyle? p3,
     TextStyle? p3Bold,
     TextStyle? p3Italic,
+    TextStyle? b1,
+    TextStyle? b2,
+    TextStyle? b3,
+    TextStyle? b4,
+    TextStyle? l1,
+    TextStyle? l2,
+    TextStyle? l3,
+    TextStyle? l4,
+    TextStyle? l5,
   }) {
     return MyTextStyles(
       h1: h1 ?? this.h1,
@@ -338,30 +347,30 @@ class MyTextStyles extends ThemeExtension<MyTextStyles> {
       return this;
     }
     return MyTextStyles(
-      b1: TextStyle.lerp(b1, other.b1, t),
-      b2: TextStyle.lerp(b2, other.b2, t),
-      b3: TextStyle.lerp(b3, other.b3, t),
-      b4: TextStyle.lerp(b4, other.b4, t),
-      h1: TextStyle.lerp(h1, other.h1, t),
-      h2: TextStyle.lerp(h2, other.h2, t),
-      h3: TextStyle.lerp(h3, other.h3, t),
-      h4: TextStyle.lerp(h4, other.h4, t),
-      h5: TextStyle.lerp(h5, other.h5, t),
-      h6: TextStyle.lerp(h6, other.h6, t),
-      l1: TextStyle.lerp(l1, other.l1, t),
-      l2: TextStyle.lerp(l2, other.l2, t),
-      l3: TextStyle.lerp(l3, other.l3, t),
-      l4: TextStyle.lerp(l4, other.l4, t),
-      l5: TextStyle.lerp(l5, other.l5, t),
-      p1: TextStyle.lerp(p1, other.p1, t),
-      p1Bold: TextStyle.lerp(p1Bold, other.p1Bold, t),
-      p1Italic: TextStyle.lerp(p1Italic, other.p1Italic, t),
-      p2: TextStyle.lerp(p2, other.p2, t),
-      p2Bold: TextStyle.lerp(p2Bold, other.p2Bold, t),
-      p2Italic: TextStyle.lerp(p2Italic, other.p2Italic, t),
-      p3: TextStyle.lerp(p1, other.p1, t),
-      p3Bold: TextStyle.lerp(p1, other.p1, t),
-      p3Italic: TextStyle.lerp(p1, other.p1, t),
+      b1: TextStyle.lerp(b1, other.b1, t) ?? const TextStyle(),
+      b2: TextStyle.lerp(b2, other.b2, t) ?? const TextStyle(),
+      b3: TextStyle.lerp(b3, other.b3, t) ?? const TextStyle(),
+      b4: TextStyle.lerp(b4, other.b4, t) ?? const TextStyle(),
+      h1: TextStyle.lerp(h1, other.h1, t) ?? const TextStyle(),
+      h2: TextStyle.lerp(h2, other.h2, t) ?? const TextStyle(),
+      h3: TextStyle.lerp(h3, other.h3, t) ?? const TextStyle(),
+      h4: TextStyle.lerp(h4, other.h4, t) ?? const TextStyle(),
+      h5: TextStyle.lerp(h5, other.h5, t) ?? const TextStyle(),
+      h6: TextStyle.lerp(h6, other.h6, t) ?? const TextStyle(),
+      l1: TextStyle.lerp(l1, other.l1, t) ?? const TextStyle(),
+      l2: TextStyle.lerp(l2, other.l2, t) ?? const TextStyle(),
+      l3: TextStyle.lerp(l3, other.l3, t) ?? const TextStyle(),
+      l4: TextStyle.lerp(l4, other.l4, t) ?? const TextStyle(),
+      l5: TextStyle.lerp(l5, other.l5, t) ?? const TextStyle(),
+      p1: TextStyle.lerp(p1, other.p1, t) ?? const TextStyle(),
+      p1Bold: TextStyle.lerp(p1Bold, other.p1Bold, t) ?? TextStyle(),
+      p1Italic: TextStyle.lerp(p1Italic, other.p1Italic, t) ?? TextStyle(),
+      p2: TextStyle.lerp(p2, other.p2, t) ?? TextStyle(),
+      p2Bold: TextStyle.lerp(p2Bold, other.p2Bold, t) ?? TextStyle(),
+      p2Italic: TextStyle.lerp(p2Italic, other.p2Italic, t) ?? TextStyle(),
+      p3: TextStyle.lerp(p1, other.p1, t) ?? TextStyle(),
+      p3Bold: TextStyle.lerp(p1, other.p1, t) ?? TextStyle(),
+      p3Italic: TextStyle.lerp(p1, other.p1, t) ?? TextStyle(),
     );
   }
 }
@@ -404,7 +413,7 @@ class MyBorderStyle extends ThemeExtension<MyBorderStyle> {
     ),
     this.strokeSm = const Border.fromBorderSide(
       BorderSide(
-        color: Color(0xff000022),
+        color: Color(0xffFC2865),
         width: 1,
         style: BorderStyle.solid,
         strokeAlign: BorderSide.strokeAlignInside,
@@ -412,7 +421,7 @@ class MyBorderStyle extends ThemeExtension<MyBorderStyle> {
     ),
     this.strokeMd = const Border.fromBorderSide(
       BorderSide(
-        color: Color(0xff000022),
+        color: Color(0xffFC2865),
         width: 2,
         style: BorderStyle.solid,
         strokeAlign: BorderSide.strokeAlignInside,
@@ -420,7 +429,7 @@ class MyBorderStyle extends ThemeExtension<MyBorderStyle> {
     ),
     this.strokeLg = const Border.fromBorderSide(
       BorderSide(
-        color: Color(0xff000022),
+        color: Color(0xffFC2865),
         width: 4,
         style: BorderStyle.solid,
         strokeAlign: BorderSide.strokeAlignInside,
@@ -501,7 +510,7 @@ class MyBorderStyle extends ThemeExtension<MyBorderStyle> {
       strokeSm: BoxBorder.lerp(strokeSm, other.strokeSm, t) ??
           const Border.fromBorderSide(
             BorderSide(
-              color: Color(0xff000022),
+              color: Color(0xffFC2865),
               width: 1,
               style: BorderStyle.solid,
               strokeAlign: BorderSide.strokeAlignInside,
@@ -510,7 +519,7 @@ class MyBorderStyle extends ThemeExtension<MyBorderStyle> {
       strokeMd: BoxBorder.lerp(strokeMd, other.strokeMd, t) ??
           const Border.fromBorderSide(
             BorderSide(
-              color: Color(0xff000022),
+              color: Color(0xffFC2865),
               width: 2,
               style: BorderStyle.solid,
               strokeAlign: BorderSide.strokeAlignInside,
@@ -519,7 +528,7 @@ class MyBorderStyle extends ThemeExtension<MyBorderStyle> {
       strokeLg: BoxBorder.lerp(strokeLg, other.strokeLg, t) ??
           const Border.fromBorderSide(
             BorderSide(
-              color: Color(0xff000022),
+              color: Color(0xffFC2865),
               width: 4,
               style: BorderStyle.solid,
               strokeAlign: BorderSide.strokeAlignInside,

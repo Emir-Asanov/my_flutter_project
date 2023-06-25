@@ -21,12 +21,12 @@ class _HomePageState extends State {
     // final textTheme = theme.getTheme().extension<MyTextStyles>()!;
     final colors = theme.getTheme().extension<MyColors>()!;
 
-    return Scaffold(
+    return const Scaffold(
       body: Center(
-        child: Container(
-          color: colors.blackBerry,
-          width: 50,
-          height: 50,
+        child: PrimaryButtonFixed(
+          text: 'HEHEHEEHEH',
+          rightIcon: false,
+          leftIcon: false,
         ),
       ),
     );
