@@ -8,7 +8,7 @@ class GetPicture {
   static const bell = 'assets/icons/Bell.svg';
   static const bellRinging = 'assets/icons/BellRinging.svg';
   static const bellSlash = 'assets/icons/BellSlash.svg';
-  static const calendarBlanck = 'assets/icons/CalendarBlanck.svg';
+  static const calendarBlanck = 'assets/icons/CalendarBlank.svg';
   static const caretDown = 'assets/icons/CaretDown.svg';
   static const caretLeft = 'assets/icons/CaretLeft.svg';
   static const caretRight = 'assets/icons/CaretRight.svg';
@@ -74,4 +74,6 @@ class GetPicture {
   static const x = 'assets/icons/X.svg';
   static const xCircle = 'assets/icons/XCircle.svg';
   static const youtubeLogo = 'assets/icons/YoutubeLogo.svg';
+  static const logo = 'assets/icons/GojiLabs Logo.svg';
+  static const avatar = 'assets/icons/User_Avatar.svg';
 }

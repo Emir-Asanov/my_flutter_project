@@ -5,8 +5,8 @@ import 'package:cool_template/assets/svg_picture.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:cool_template/uikit/theme.dart';
 
-class PrimaryButtonFixed extends StatefulWidget {
-  const PrimaryButtonFixed({
+class MyPrimaryButtonFixed extends StatefulWidget {
+  const MyPrimaryButtonFixed({
     super.key,
     this.leftIcon = false,
     this.rightIcon = false,
@@ -17,10 +17,10 @@ class PrimaryButtonFixed extends StatefulWidget {
   final bool rightIcon;
   final String text;
   @override
-  State<PrimaryButtonFixed> createState() => _PrimaryButtonFixedState();
+  State<MyPrimaryButtonFixed> createState() => _MyPrimaryButtonFixedState();
 }
 
-class _PrimaryButtonFixedState extends State<PrimaryButtonFixed> {
+class _MyPrimaryButtonFixedState extends State<MyPrimaryButtonFixed> {
   @override
   int state = 0;
   @override

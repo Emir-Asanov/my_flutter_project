@@ -1,4 +1,5 @@
 import 'package:cool_template/routes/routes.dart';
+import 'package:cool_template/uikit/components/footer.dart';
 import 'package:cool_template/uikit/theme.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -6,6 +7,8 @@ import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:cool_template/assets/svg_picture.dart';
 import 'package:cool_template/uikit/components/primary_button_fixed.dart';
+import 'package:cool_template/uikit/components/header.dart';
+import 'package:cool_template/uikit/components/menu_drawer.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -22,13 +25,29 @@ class _HomePageState extends State {
     final colors = theme.getTheme().extension<MyColors>()!;
 
     return const Scaffold(
-      body: Center(
-        child: PrimaryButtonFixed(
-          text: 'HEHEHEEHEH',
-          rightIcon: false,
-          leftIcon: false,
+      body: Stack(children: [
+        Column(
+          children: [
+            MyHeader(
+              title: 'helOOO!',
+              type: HeaderSettings.menuAndLogo,
+            ),
+            Expanded(
+              child: Center(
+                child: MyPrimaryButtonFixed(
+                  text: 'HEHEHEEHEH',
+                  rightIcon: false,
+                  leftIcon: false,
+                ),
+              ),
+            ),
+            MyFooter(
+              type: FooterSettings.typeFloating,
+            )
+          ],
         ),
-      ),
+        MenuDrawer(),
+      ]),
     );
   }
 }
