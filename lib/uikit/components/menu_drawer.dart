@@ -51,9 +51,7 @@ class _MenuDrawerState extends State<MenuDrawer> {
                         )),
             ),
             padding: EdgeInsets.symmetric(
-              horizontal: ScreenUtil().setWidth(
-                16,
-              ),
+              horizontal: 16,
               vertical: ScreenUtil().setHeight(
                 48,
               ),
@@ -117,7 +115,7 @@ class _MenuDrawerState extends State<MenuDrawer> {
                     height: ScreenUtil().setHeight(
                       72,
                     ),
-                    width: ScreenUtil().setHeight(
+                    width: ScreenUtil().setWidth(
                       280,
                     ),
                     decoration: BoxDecoration(
@@ -177,7 +175,9 @@ class _MenuDrawerState extends State<MenuDrawer> {
                             decoration: BoxDecoration(
                               border: Border(
                                 bottom: BorderSide(
-                                    width: 1, color: colors.blackBerry),
+                                  width: 1,
+                                  color: colors.blackBerry,
+                                ),
                               ),
                             ),
                             padding: EdgeInsets.symmetric(
